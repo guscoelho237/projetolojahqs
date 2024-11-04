@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulher Maravilha HQs</title>
+    <link rel="stylesheet" href="hqsww.css">
+    <script>
+        function updatePrice() {
+            const formato = document.getElementById("formato").value;
+            const precoElement = document.getElementById("preco");
+            if (formato === "digital") {
+                precoElement.textContent = "R$ 29,99"; // Preço digital
+            } else {
+                precoElement.textContent = "R$ 49,99"; // Preço físico
+            }
+        }
+        
+        function addToCart() {
+            const formato = document.getElementById("formato").value;
+            const produto = {
+                nome: "A Saga Da Mulher-Maravilha 01",
+                preco: formato === "digital" ? 29.99 : 49.99,
+                formato: formato,
+                quantidade: 1
+            };
+
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const itemCarrinho = carrinho.find(item => item.nome === produto.nome && item.formato === produto.formato);
+
+            if (itemCarrinho) {
+                itemCarrinho.quantidade++;
+            } else {
+                carrinho.push(produto);
+            }
+            
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    <style>
+        /* Estilo do produto */
+        .produto {
+            display: flex; 
+            align-items: center; 
+            padding: 20px; 
+            background-color: #FFD700; /* Amarelo da Mulher Maravilha */
+            border-radius: 10px; 
+        }
+
+        .imagens-produto {
+            flex: 1; 
+            max-width: 300px; 
+        }
+
+        .imagem-principal {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10px; 
+        }
+
+        .detalhes-produto {
+            flex: 2; 
+            padding-left: 20px; 
+        }
+
+        h2 {
+            color: #B22222; /* Vermelho da Mulher Maravilha */
+        }
+
+        .descricao {
+            color: #000000; /* Preto */
+        }
+
+        .preco {
+            color: #B22222; /* Vermelho da Mulher Maravilha */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #B22222; /* Vermelho da Mulher Maravilha */
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #DAA520; /* Dourado mais escuro */
+        }
+
+        /* Estilo do nav */
+        nav {
+            background-color: #B22222; /* Vermelho da Mulher Maravilha */
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #FFFFFF; /* Branco */
+            text-decoration: none;
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #FFD700; /* Dourado ao passar o mouse */
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilo do footer */
+        footer {
+            background-color: #B22222; /* Vermelho da Mulher Maravilha */
+            color: #FFFFFF; /* Branco */
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+            color: #FFD700; /* Dourado para os títulos das seções */
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background-color: #B22222; /* Dourado mais escuro */
+            color: #000000; /* Preto para o texto do rodapé */
+        }
+
+        .footer-section a {
+            color: #FFD700; /* Dourado */
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline; /* Destaca o link ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hqs.html">HQs</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="produto">
+            <div class="imagens-produto">
+                <img src="mulher-maravilhahq2.jpg" alt="Produto principal" class="imagem-principal" id="imagem-principal">
+            </div>
+
+            <div class="detalhes-produto">
+                <h2>HQ da Mulher Maravilha</h2>
+                <p class="descricao">Uma coleção incrível de histórias em quadrinhos da Mulher Maravilha, incluindo:<br>
+                    - A Saga Da Mulher-Maravilha 01 <br>
+                </p>
+                <p class="preco" id="preco">R$ 29,99</p>
+                <form class="opcoes-compra" onsubmit="event.preventDefault(); addToCart();">
+                    <label for="formato">Formato:</label>
+                    <select id="formato" onchange="updatePrice()">
+                        <option value="digital">Digital</option>
+                        <option value="fisico">Físico</option>
+                    </select>
+                    <br>
+                    <button type="submit">Adicionar ao Carrinho</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre nós</h4>
+                <p>Somos uma empresa dedicada a fornecer soluções de alta qualidade para nossos clientes.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="contato">
+                <h4>Contato</h4>
+                <p>Email: contato@empresa.com</p>
+                <p>Telefone: (11) 1111-1111</p>
+                <p>Endereço: Rua exemplo, 111, São Paulo</p>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

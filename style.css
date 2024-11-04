@@ -1,0 +1,185 @@
+/* Estiliza o contêiner do menu de navegação */
+nav {
+    background-color: #2479da;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao contêiner do menu */
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Necessário para posicionar o dropdown */
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #8bb6e7; /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra mais forte no texto */
+}
+
+/* Estilo dos cabeçalhos */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Estilo do menu suspenso (dropdown) */
+nav ul li .dropdown-content {
+    display: none; /* Oculta o conteúdo do dropdown */
+    position: absolute;
+    background-color: #2479da;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra ao redor do dropdown */
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+/* Estiliza os itens do dropdown */
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+/* Estiliza os links dentro do dropdown */
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+    color: #ffffff; /* Cor dos links do dropdown */
+    text-decoration: none;
+    display: block;
+}
+
+/* Efeito ao passar o mouse sobre os links do dropdown */
+nav ul li .dropdown-content li a:hover {
+    background-color: #1c599f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Mostra o dropdown ao passar o mouse sobre o item do menu */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+/* Estilo para o botão de Login no menu */
+nav ul li a.btn-login {
+    background-color: #ff5722; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Efeito ao passar o mouse sobre o botão de Login */
+nav ul li a.btn-login:hover {
+    background-color: #e64a19; /* Cor mais escura ao passar o mouse */
+}
+
+/* Conteudo site - slider */
+/* Estilização do container do slider */
+.slider {
+    width: 900%; 
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 200%;
+    animation: slideAnimation 13s infinite;
+}
+
+.slide {
+    width: 50%;
+    flex-shrink: 0;
+}
+
+@keyframes slideAnimation {
+    0% {transform: translateX(0);}
+    20% {transform: translateX(-50%);}
+    40% {transform: translateX(-100%);}
+    60% {transform: translateX(0%);}
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Estilização da seção de produtos */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os produtos */
+    margin: 20px 0;
+}
+
+.produto {
+    background-color: #f4f4f4; /* Cor de fundo da caixa do produto */
+    border: 2px solid #ccc; /* Borda da caixa do produto */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    flex: 0 1 calc(50% - 20px); /* Cada produto ocupa 50% menos o espaço do gap */
+    max-width: 300px; /* Largura máxima */
+}
+
+.produto img {
+    width: 100%; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 200px; /* Altura máxima para as imagens */
+}
+
+/* Estilo dos links dos produtos */
+.produto a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonte */
+    display: block; /* Faz o link ocupar toda a caixa */
+    margin-top: 10px; /* Espaço acima do link */
+}
+
+/* Estilo do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2479da;
+    color: #ffffff;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c599f; /* Cor de fundo do rodapé */
+}

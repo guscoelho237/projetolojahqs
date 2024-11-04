@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Loja de Quadrinhos</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hqs.html">HQs</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <center><h1>Meu Carrinho</h1></center>
+
+    <div class="carrinho-container">
+        <div id="itens-carrinho">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+        <div id="total-container">
+            <p>Total: R$ <span id="total">0.00</span></p>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="contato">
+                <h4>Contato</h4>
+                <p>Email: contato@empresa.com</p>
+                <p>Telefone: (11) 1111-1111</p>
+                <p>Endereço: Rua exemplo, 111, São Paulo</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function atualizarCarrinho() {
+            const itensCarrinho = document.getElementById('itens-carrinho');
+            const totalElement = document.getElementById('total');
+
+            // Obter o carrinho do localStorage
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            itensCarrinho.innerHTML = ""; // Limpa itens do carrinho
+            let total = 0;
+
+            if (carrinho.length === 0) {
+                itensCarrinho.innerHTML = "<p>Seu carrinho está vazio.</p>";
+            } else {
+                carrinho.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('item-carrinho');
+                    itemDiv.innerHTML = `
+                        <h3>${item.nome} (${item.formato})</h3>
+                        <p>R$ ${item.preco.toFixed(2)} x ${item.quantidade}</p>
+                        <button onclick="removerDoCarrinho(${item.id}, '${item.formato}')">Remover</button>
+                    `;
+                    itensCarrinho.appendChild(itemDiv);
+                    total += item.preco * item.quantidade;
+                });
+            }
+
+            totalElement.innerText = total.toFixed(2);
+        }
+
+        function removerDoCarrinho(id, formato) {
+            // Obter o carrinho do localStorage
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            // Encontrar o item
+            const itemIndex = carrinho.findIndex(item => item.id === id && item.formato === formato);
+            
+            if (itemIndex !== -1) {
+                if (carrinho[itemIndex].quantidade > 1) {
+                    // Diminui a quantidade se for maior que 1
+                    carrinho[itemIndex].quantidade--;
+                } else {
+                    // Remove o item se a quantidade for 1
+                    carrinho.splice(itemIndex, 1);
+                }
+            }
+
+            // Atualizar o localStorage
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            // Atualizar a visualização do carrinho
+            atualizarCarrinho();
+        }
+
+        // Atualiza o carrinho ao carregar a página
+        document.addEventListener('DOMContentLoaded', atualizarCarrinho);
+    </script>
+</body>
+</html>

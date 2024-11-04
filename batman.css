@@ -1,0 +1,159 @@
+nav {
+    background-color: #000000; /* Preto */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #FFCC00; /* Amarelo */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #FFCC00; /* Amarelo */
+    background-color: #333333; /* Cinza escuro */
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para o botão de Login no menu */
+nav ul li a.btn-login {
+    background-color: #FFCC00; /* Amarelo */
+    color: black; /* Preto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse sobre o botão de Login */
+nav ul li a.btn-login:hover {
+    background-color:  #cba200; /* Laranja */
+}
+
+/* Conteudo site - slider */
+.slider {
+    width: 900%; 
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 200%;
+    animation: slideAnimation 13s infinite;
+}
+
+.slide {
+    width: 50%;
+    flex-shrink: 0;
+}
+
+@keyframes slideAnimation {
+    0% {transform: translateX(0);}
+    20% {transform: translateX(-50%);}
+    40% {transform: translateX(-100%);}
+    60% {transform: translateX(0%);}
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+.produtos-container {
+    margin: 20px 0; /* Margem superior e inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+.produtos {
+    display: flex; /* Usar flexbox para layout */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Espaço entre os produtos */
+}
+
+.produto {
+    background-color: #333333; /* Fundo escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    width: 150px; /* Largura fixa para cada produto */
+    color: #FFFFFF; /* Cor do texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.produto img {
+    width: 100%; /* Imagem ocupa toda a largura do contêiner */
+    border-radius: 5px; /* Bordas arredondadas para a imagem */
+}
+
+.produto p {
+    margin-top: 5px; /* Espaço acima da descrição */
+    font-size: 14px; /* Tamanho da fonte da descrição */
+}
+.produto a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Herda a cor do texto do contêiner */
+}
+
+.produto:hover {
+    background-color: #444444; /* Altera o fundo ao passar o mouse */
+}
+
+/* Estilo do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000; /* Preto */
+    color: #FFCC00; /* Amarelo */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #FFCC00; /* Amarelo para os títulos das seções */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #333333; /* Cinza escuro */
+    color: #FFCC00; /* Amarelo */
+}
+
+/* Opcional: Efeito ao passar o mouse sobre os links no footer */
+.footer-section a {
+    color: #FFCC00; /* Amarelo */
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Destaca o link ao passar o mouse */
+}

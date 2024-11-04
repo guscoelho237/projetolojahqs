@@ -1,0 +1,217 @@
+/* Estiliza o contêiner do menu de navegação */
+nav {
+    background-color: #2479da;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao contêiner do menu */
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Necessário para posicionar o dropdown */
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #8bb6e7; /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra mais forte no texto */
+}
+
+/* Estilo dos cabeçalhos */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Estilo do menu suspenso (dropdown) */
+nav ul li .dropdown-content {
+    display: none; /* Oculta o conteúdo do dropdown */
+    position: absolute;
+    background-color: #2479da;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra ao redor do dropdown */
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+/* Estiliza os itens do dropdown */
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+/* Estiliza os links dentro do dropdown */
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+    color: #ffffff; /* Cor dos links do dropdown */
+    text-decoration: none;
+    display: block;
+}
+
+/* Efeito ao passar o mouse sobre os links do dropdown */
+nav ul li .dropdown-content li a:hover {
+    background-color: #1c599f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Mostra o dropdown ao passar o mouse sobre o item do menu */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+/* Estilo para o botão de Login no menu */
+nav ul li a.btn-login {
+    background-color: #ff5722; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Efeito ao passar o mouse sobre o botão de Login */
+nav ul li a.btn-login:hover {
+    background-color: #e64a19; /* Cor mais escura ao passar o mouse */
+}
+/* Estilo do formulário de suporte */
+form {
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 20px auto; /* Centraliza o formulário */
+    padding: 20px;
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    border: 1px solid #ccc; /* Borda ao redor do formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do formulário */
+}
+
+/* Estiliza os rótulos do formulário */
+form label {
+    display: block; /* Faz com que os rótulos fiquem em bloco */
+    margin-bottom: 8px; /* Espaçamento abaixo do rótulo */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilo dos campos de entrada e textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 95%; /* Largura total dos campos */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento abaixo do campo */
+    border: 1px solid #ccc; /* Borda do campo */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do botão de envio */
+form button {
+    background-color: #2479da; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+form button:hover {
+    background-color: #1c599f; /* Cor de fundo ao passar o mouse */
+}
+
+
+/*footer*/
+/*Estilo geral do footer*/
+footer {
+    background-color: #2479da;
+    color: white;
+    padding: 40px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex-basis: 23%; /* Faz com que as seções ocupem 23% da largura, com espaço para margens */
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #849be7;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #849be7;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

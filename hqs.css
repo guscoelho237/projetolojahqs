@@ -1,0 +1,117 @@
+/* Estiliza o contêiner do menu de navegação */
+nav {
+    background-color: #2479da;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #8bb6e7;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para o botão de Login no menu */
+nav ul li a.btn-login {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse sobre o botão de Login */
+nav ul li a.btn-login:hover {
+    background-color: #e64a19;
+}
+
+/* Estilo da seção de HQs */
+.hqs-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens */
+    margin: 20px; /* Margem ao redor do contêiner */
+}
+
+/* Estilo das cartas de HQ */
+.hq-card {
+    background-color: #f4f4f4; /* Cor de fundo */
+    border: 1px solid #ddd; /* Bordas */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin: 10px; /* Margem entre as cartas */
+    width: 150px; /* Largura fixa para cada carta */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s; /* Transição para efeito de hover */
+    /* Estilo para links nas cartas */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: inherit; /* Mantém a cor do texto do pai (cartas) */
+}
+
+.hq-image {
+    width: 150px; /* ajuste o tamanho da imagem conforme necessário */
+    height: 200px; /* altura fixa */
+    margin-right: 10px; /* espaço entre a imagem e o texto */
+    object-fit: cover; /* mantém a proporção da imagem e corta se necessário */
+}
+
+
+/* Efeito ao passar o mouse sobre as cartas */
+.hq-card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da carta */
+    color: #ff5722; /* Muda a cor do texto ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho da carta */
+}
+
+/* Estilo do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2479da;
+    color: #ffffff;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c599f; /* Cor de fundo do rodapé */
+}

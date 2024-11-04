@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depoimentos - Loja de Quadrinhos</title>
+    <link rel="stylesheet" href="depoimento.css">
+    <script src="depoimentos.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hqs.html">HQs</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+    <br>
+
+    <h1>Depoimentos de Clientes</h1>
+
+    <div class="depoimentos-container" id="depoimentos-container">
+        <div class="depoimento">
+            <p><strong>Maria Silva:</strong> <span>★★★★☆</span> "Amei a variedade de HQs que encontrei aqui! O atendimento é excelente!"</p>
+        </div>
+        <div class="depoimento">
+            <p><strong>João Pereira:</strong> <span>★★★★★</span> "Os preços são justos e a entrega foi super rápida. Recomendo!"</p>
+        </div>
+        <div class="depoimento">
+            <p><strong>Lucas Almeida:</strong> <span>★★★★☆</span> "Encontrei as HQs que procurava há muito tempo. Voltarei com certeza!"</p>
+        </div>
+        <!-- Depoimentos existentes -->
+    </div>
+
+    <h2>Deixe seu Depoimento</h2>
+    <form id="form-depoimento">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <label for="avaliacao">Avaliação:</label>
+        <p>Avaliações: <span id="avaliacao-texto">(5 estrelas)</span></p>
+        <div id="estrelas" class="estrelas">
+            <span class="estrela" data-value="1">★</span>
+            <span class="estrela" data-value="2">★</span>
+            <span class="estrela" data-value="3">★</span>
+            <span class="estrela" data-value="4">★</span>
+            <span class="estrela" data-value="5">★</span>
+        </div>
+        <input type="hidden" id="avaliacao" value="0">
+        
+        <label for="comentario">Comentário:</label>
+        <textarea id="comentario" rows="4" required></textarea>
+        <button type="submit">Publicar Depoimento</button>
+    </form>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="contato">
+                <h4>Contato</h4>
+                <p>Email: Contato@empresa.com</p>
+                <p>Telefone: (11) 1111-1111</p>
+                <p>Empresa: Rua exemplo, 111, São Paulo</p>
+            </div>
+            
+            <!-- Outras seções do footer -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2024 Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

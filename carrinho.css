@@ -1,0 +1,141 @@
+/* Estiliza o contêiner do menu de navegação */
+nav {
+    background-color: #2479da;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #8bb6e7;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para o botão de Login no menu */
+nav ul li a.btn-login {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse sobre o botão de Login */
+nav ul li a.btn-login:hover {
+    background-color: #e64a19;
+}
+
+/* Estilo da seção do carrinho */
+.carrinho-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    max-width: 800px; /* Largura máxima da seção */
+    margin: 20px auto; /* Margem superior e inferior */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f4f4f4; /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.carrinho-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte do título */
+}
+
+/* Estilo dos itens do carrinho */
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border-bottom: 1px solid #ddd; /* Linha abaixo do item */
+}
+
+.item-carrinho h3 {
+    margin: 0; /* Remove a margem */
+}
+
+/* Estilo dos botões de controle */
+.item-carrinho button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo do total e do botão de finalizar compra */
+#total-container {
+    margin-top: 20px;
+    font-size: 20px; /* Tamanho da fonte do total */
+}
+
+#finalizar-compra {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse sobre o botão de finalizar compra */
+#finalizar-compra:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+}
+
+/* Estilo do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2479da;
+    color: #ffffff;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c599f; /* Cor de fundo do rodapé */
+}

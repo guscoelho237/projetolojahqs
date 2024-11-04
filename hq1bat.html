@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman HQs</title>
+    <link rel="stylesheet" href="hqsbat.css">
+    <script>
+        function updatePrice() {
+            const formato = document.getElementById("formato").value;
+            const precoElement = document.getElementById("preco");
+            if (formato === "digital") {
+                precoElement.textContent = "R$ 29,99"; // Preço digital
+            } else {
+                precoElement.textContent = "R$ 49,99"; // Preço físico
+            }
+        }
+        
+        function addToCart() {
+            const formato = document.getElementById("formato").value;
+            const produto = {
+                nome: "Batman - Ano Um",
+                preco: formato === "digital" ? 29.99 : 49.99,
+                formato: formato, // Inclui a versão
+                quantidade: 1
+            };
+
+            // Adiciona o produto ao carrinho no localStorage
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const itemCarrinho = carrinho.find(item => item.nome === produto.nome && item.formato === produto.formato);
+
+            if (itemCarrinho) {
+                itemCarrinho.quantidade++;
+            } else {
+                carrinho.push(produto);
+            }
+            
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    <style>
+        /* Estilo do produto */
+        .produto {
+            display: flex; /* Usar flexbox para organizar a imagem e os detalhes */
+            align-items: center; /* Centralizar verticalmente os itens */
+            padding: 20px; /* Adiciona algum espaçamento interno */
+        }
+
+        .imagens-produto {
+            flex: 1; /* A imagem ocupa uma parte do espaço */
+            max-width: 300px; /* Define uma largura máxima para a imagem */
+        }
+
+        .imagem-principal {
+            width: 100%; /* A imagem ocupa 100% do espaço do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        .detalhes-produto {
+            flex: 2; /* Os detalhes ocupam o dobro do espaço em relação à imagem */
+            padding-left: 20px; /* Espaçamento entre a imagem e os detalhes */
+        }
+
+        /* Estilo do nav e footer omitidos para brevidade */
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hqs.html">HQs</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="produto">
+            <div class="imagens-produto">
+                <img src="batmanhq1.jpg" alt="Produto principal" class="imagem-principal" id="imagem-principal">
+            </div>
+
+            <div class="detalhes-produto">
+                <h2>HQ do Batman</h2>
+                <p class="descricao">Uma coleção incrível de histórias em quadrinhos do Batman, incluindo:<br>
+                    - Batman: Ano Um <br>
+                </p>
+                <p class="preco" id="preco">R$ 29,99</p>
+                <form class="opcoes-compra" onsubmit="event.preventDefault(); addToCart();">
+                    <label for="formato">Formato:</label>
+                    <select id="formato" onchange="updatePrice()">
+                        <option value="digital">Digital</option>
+                        <option value="fisico">Físico</option>
+                    </select>
+                    <br>
+                    <button type="submit">Adicionar ao Carrinho</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre nós</h4>
+                <p>Somos uma empresa dedicada a fornecer soluções de alta qualidade para nossos clientes.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="contato">
+                <h4>Contato</h4>
+                <p>Email: contato@empresa.com</p>
+                <p>Telefone: (11) 1111-1111</p>
+                <p>Endereço: Rua exemplo, 111, São Paulo</p>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

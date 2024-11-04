@@ -1,0 +1,211 @@
+/* Estiliza o contêiner do menu de navegação */
+nav {
+    background-color: #2479da;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao contêiner do menu */
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Necessário para posicionar o dropdown */
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #8bb6e7; /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra mais forte no texto */
+}
+
+/* Estilo dos cabeçalhos */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Estilo do menu suspenso (dropdown) */
+nav ul li .dropdown-content {
+    display: none; /* Oculta o conteúdo do dropdown */
+    position: absolute;
+    background-color: #2479da;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra ao redor do dropdown */
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+/* Estiliza os itens do dropdown */
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+/* Estiliza os links dentro do dropdown */
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+    color: #ffffff; /* Cor dos links do dropdown */
+    text-decoration: none;
+    display: block;
+}
+
+/* Efeito ao passar o mouse sobre os links do dropdown */
+nav ul li .dropdown-content li a:hover {
+    background-color: #1c599f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Mostra o dropdown ao passar o mouse sobre o item do menu */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo para o botão de Login no menu */
+nav ul li a.btn-login {
+    background-color: #ff5722; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Efeito ao passar o mouse sobre o botão de Login */
+nav ul li a.btn-login:hover {
+    background-color: #e64a19; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo da seção de login e cadastro */
+.login-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    max-width: 600px; /* Largura máxima da seção */
+    margin: 20px auto; /* Margem superior e inferior */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f4f4f4; /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo dos títulos do formulário */
+.login-cadastro h1 {
+    margin: 20px 0; /* Margem superior e inferior */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte do título */
+}
+
+/* Estilização do formulário de login e cadastro */
+.login-cadastro form {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    width: 100%; /* Preenche toda a largura da seção */
+}
+
+/* Estilo dos rótulos do formulário */
+.login-cadastro label {
+    margin-bottom: 8px; /* Espaço abaixo do rótulo */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo dos campos de entrada */
+.login-cadastro input {
+    padding: 10px; /* Espaço interno */
+    margin-bottom: 15px; /* Espaço entre os campos */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Transição de cor da borda */
+}
+
+/* Efeito de foco nos campos */
+.login-cadastro input:focus {
+    border-color: #2479da; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilo do botão de envio */
+.login-cadastro button {
+    padding: 10px; /* Espaço interno do botão */
+    background-color: #2479da; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s; /* Transição de cor */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.login-cadastro button:hover {
+    background-color: #1c599f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo da seção Sobre */
+.sobre-container {
+    max-width: 800px; /* Largura máxima da seção */
+    margin: 20px auto; /* Margem superior e inferior */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f4f4f4; /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo dos títulos da seção Sobre */
+.sobre-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte do título */
+    margin-bottom: 20px; /* Margem abaixo do título */
+}
+
+/* Estilo dos subtítulos da seção Sobre */
+.sobre-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte dos subtítulos */
+    margin-top: 20px; /* Margem acima do subtítulo */
+}
+
+/* Estilo dos parágrafos na seção Sobre */
+.sobre-container p {
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 15px; /* Margem abaixo do parágrafo */
+}
+
+/* Estilo do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2479da;
+    color: #ffffff;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c599f; /* Cor de fundo do rodapé */
+}

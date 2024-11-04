@@ -1,0 +1,158 @@
+/* Estilo do nav */
+nav {
+    background-color: #000000; /* Preto */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFCC00; /* Amarelo */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #333333; /* Cinza escuro */
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a.btn-login {
+    background-color: #FFCC00; /* Amarelo */
+    color: black; /* Preto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav ul li a.btn-login:hover {
+    background-color: #cba200; /* Laranja */
+}
+
+/* Estilo da seção de produto */
+.produto {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000; /* Preto */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+}
+
+.imagens-produto {
+    flex: 1;
+}
+
+.imagem-principal {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.miniaturas {
+    display: flex;
+    margin-top: 10px;
+}
+
+.miniatura {
+    width: 70px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #FFCC00; /* Amarelo */
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.miniatura:hover {
+    border: 2px solid #FFCC00; /* Amarelo ao passar o mouse */
+}
+
+.detalhes-produto {
+    flex: 1;
+    color: #FFCC00; /* Amarelo */
+}
+
+h2 {
+    color: #FFCC00; /* Amarelo */
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #FFFFFF; /* Branco */
+    margin-bottom: 15px;
+}
+
+.preco {
+    color: #FFCC00; /* Amarelo */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.opcoes-compra {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px;
+    background-color: #FFCC00; /* Amarelo */
+    color: black; /* Preto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #cba200; /* Laranja */
+}
+
+/* Estilo do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000; /* Preto */
+    color: #FFCC00; /* Amarelo */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #FFCC00; /* Amarelo para os títulos das seções */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #333333; /* Cinza escuro */
+    color: #FFCC00; /* Amarelo */
+}
+
+.footer-section a {
+    color: #FFCC00; /* Amarelo */
+    text-decoration: none;
+}

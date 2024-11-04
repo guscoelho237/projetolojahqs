@@ -1,0 +1,174 @@
+/* Estiliza o contêiner do menu de navegação */
+nav {
+    background-color: #2479da;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove a marcação da lista e centraliza os itens */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estiliza cada item da lista */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Estiliza os links dentro do menu */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav ul li a:hover {
+    color: #8bb6e7;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para o botão de Login no menu */
+nav ul li a.btn-login {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse sobre o botão de Login */
+nav ul li a.btn-login:hover {
+    background-color: #e64a19;
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center; /* Centraliza o título */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px 0; /* Espaço acima e abaixo do título */
+}
+
+/* Estilo da seção de depoimentos */
+.depoimentos-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto; /* Centraliza a seção */
+}
+
+/* Estilo dos depoimentos */
+.depoimento {
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço entre os comentários */
+    background-color: #f9f9f9; /* Cor de fundo leve */
+}
+
+/* Estilo do título dos comentários */
+.depoimento p {
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estilo da seção "Deixe seu Depoimento" */
+h2 {
+    text-align: center; /* Centraliza o subtítulo */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px 0; /* Espaço acima e abaixo do subtítulo */
+}
+
+/* Estilo do formulário de depoimento */
+#form-depoimento {
+    max-width: 600px; /* Limita a largura do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px; /* Espaçamento interno do formulário */
+    border: 1px solid #ccc; /* Borda do formulário */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo do formulário */
+    margin-bottom: 30px; /* Adiciona espaço abaixo do formulário */
+}
+
+
+/* Estilo dos campos de entrada de texto */
+input[type="text"],
+textarea {
+    width: 100%; /* Largura total */
+    padding: 8px; /* Espaço interno */
+    margin: 10px 0; /* Espaço acima e abaixo */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo das estrelas */
+.estrelas {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px; /* Espaço abaixo das estrelas */
+}
+
+.estrela {
+    font-size: 30px; /* Tamanho das estrelas */
+    color: #ccc; /* Cor cinza das estrelas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.estrela.selected {
+    color: gold; /* Cor dourada ao selecionar */
+}
+
+
+/* Estilo do botão de envio */
+button {
+    background-color: #2479da; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Transição de cor */
+    display: block; /* Exibe o botão como um bloco */
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #1c599f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo do footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2479da;
+    color: #ffffff;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c599f; /* Cor de fundo do rodapé */
+}
